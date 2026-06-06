@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+/* Hide scrollbars globally or via .no-scrollbar class utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Apply scrollbar removal globally to main containers without losing swipe/drag functionality */
+#sidebar-nav::-webkit-scrollbar,
+#erp-main-container-viewport::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#sidebar-nav,
+#erp-main-container-viewport,
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -1,0 +1,410 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "email": "officer@vendorbridge.com",
+      "firstName": "Rahul",
+      "lastName": "Mehta",
+      "role": "Procurement Officer",
+      "sidebar_width": 250
+    },
+    {
+      "id": "u2",
+      "email": "vendor@infra.com",
+      "firstName": "Amit",
+      "lastName": "Patel",
+      "role": "Vendor",
+      "vendorId": "v1",
+      "sidebar_width": 250
+    },
+    {
+      "id": "u3",
+      "email": "manager@vendorbridge.com",
+      "firstName": "Priya",
+      "lastName": "Shah",
+      "role": "Manager/Approver",
+      "sidebar_width": 250
+    },
+    {
+      "id": "u4",
+      "email": "admin@vendorbridge.com",
+      "firstName": "System",
+      "lastName": "Admin",
+      "role": "Admin",
+      "sidebar_width": 250
+    }
+  ],
+  "vendors": [
+    {
+      "id": "v1",
+      "name": "Infra Supplies Pvt Ltd",
+      "category": "Furniture",
+      "gstNo": "24AAAAB1234C1Z0",
+      "contactNo": "+91 261 2234091",
+      "email": "sales@infrasupplies.com",
+      "status": "Active",
+      "rating": 4.8,
+      "paymentTerms": "30 days",
+      "address": "456 Industrial Estate, Surat, Gujarat",
+      "country": "India"
+    },
+    {
+      "id": "v2",
+      "name": "Tech Core LTD",
+      "category": "IT Hardware",
+      "gstNo": "27AABCT9876F2Z5",
+      "contactNo": "+91 22 45676899",
+      "email": "bids@techcore.com",
+      "status": "Active",
+      "rating": 4.5,
+      "paymentTerms": "20 days",
+      "address": "B-102 Trade Center, Bandra Kurla, Mumbai",
+      "country": "India"
+    },
+    {
+      "id": "v3",
+      "name": "FastLog Transport",
+      "category": "Logistics",
+      "gstNo": "19AAECG2345A3Z1",
+      "contactNo": "+91 33 22890987",
+      "email": "dispatch@fastlog.in",
+      "status": "Blocked",
+      "rating": 4.2,
+      "paymentTerms": "15 days",
+      "address": "78 Sector V, Salt Lake City, Kolkata",
+      "country": "India"
+    },
+    {
+      "id": "v4",
+      "name": "Office Need Co.",
+      "category": "Furniture",
+      "gstNo": "29AAECS5582F2Z1",
+      "contactNo": "+91 80 41103020",
+      "email": "info@officeneed.com",
+      "status": "Pending",
+      "rating": 4,
+      "paymentTerms": "15 days",
+      "address": "101 Modern Workspace, Surat, Gujarat",
+      "country": "India"
+    }
+  ],
+  "rfqs": [
+    {
+      "id": "rfq1",
+      "title": "Office Furniture Procurement Q2",
+      "category": "Furniture",
+      "deadline": "2026-06-30",
+      "description": "Ergonomic chairs and standing desks for 3rd floor office expansion.",
+      "items": [
+        {
+          "id": "item1",
+          "item": "Ergonomic chair",
+          "qty": 25,
+          "unit": "NOS"
+        },
+        {
+          "id": "item2",
+          "item": "Standing desks",
+          "qty": 10,
+          "unit": "NOS"
+        }
+      ],
+      "assignedVendorIds": [
+        "v1",
+        "v2",
+        "v4"
+      ],
+      "status": "Bids Received",
+      "createdAt": "2026-06-05"
+    },
+    {
+      "id": "rfq2",
+      "title": "Server Room IT Infrastructure setup",
+      "category": "IT Hardware",
+      "deadline": "2026-06-25",
+      "description": "Procurement of premium dynamic workstation setups & switches.",
+      "items": [
+        {
+          "id": "item3",
+          "item": "Rack Servers 2U",
+          "qty": 4,
+          "unit": "NOS"
+        },
+        {
+          "id": "item4",
+          "item": "Managed Switch 48 Port",
+          "qty": 2,
+          "unit": "NOS"
+        }
+      ],
+      "assignedVendorIds": [
+        "v2"
+      ],
+      "status": "Sent",
+      "createdAt": "2026-06-06"
+    }
+  ],
+  "quotations": [
+    {
+      "id": "q1",
+      "rfqId": "rfq1",
+      "vendorId": "v1",
+      "vendorName": "Infra Supplies Pvt Ltd",
+      "items": [
+        {
+          "id": "item1",
+          "item": "Ergonomic chair",
+          "qty": 25,
+          "unit": "NOS",
+          "unitPrice": 3500,
+          "total": 87500
+        },
+        {
+          "id": "item2",
+          "item": "Standing desks",
+          "qty": 10,
+          "unit": "NOS",
+          "unitPrice": 7000,
+          "total": 70000
+        }
+      ],
+      "subtotal": 156780,
+      "gstPercent": 18,
+      "gstAmount": 28220,
+      "grandTotal": 185000,
+      "deliveryDays": 10,
+      "paymentTerms": "30 days",
+      "notes": "Premium ergonomic mesh chair range with custom multi-tilt control. Includes a 3-year hydraulic cylinder warranty.",
+      "status": "Submitted",
+      "rating": 4.8
+    },
+    {
+      "id": "q2",
+      "rfqId": "rfq1",
+      "vendorId": "v2",
+      "vendorName": "Tech Core LTD",
+      "items": [
+        {
+          "id": "item1",
+          "item": "Ergonomic chair",
+          "qty": 25,
+          "unit": "NOS",
+          "unitPrice": 3800,
+          "total": 95000
+        },
+        {
+          "id": "item2",
+          "item": "Standing desks",
+          "qty": 10,
+          "unit": "NOS",
+          "unitPrice": 7450,
+          "total": 74500
+        }
+      ],
+      "subtotal": 169500,
+      "gstPercent": 18,
+      "gstAmount": 30510,
+      "grandTotal": 200010,
+      "deliveryDays": 14,
+      "paymentTerms": "20 days",
+      "notes": "Commercial range desks and high-back chairs. Immediate warehousing dispatch availability.",
+      "status": "Submitted",
+      "rating": 4.5
+    },
+    {
+      "id": "q3",
+      "rfqId": "rfq1",
+      "vendorId": "v4",
+      "vendorName": "Office Need Co.",
+      "items": [
+        {
+          "id": "item1",
+          "item": "Ergonomic chair",
+          "qty": 25,
+          "unit": "NOS",
+          "unitPrice": 4200,
+          "total": 105000
+        },
+        {
+          "id": "item2",
+          "item": "Standing desks",
+          "qty": 10,
+          "unit": "NOS",
+          "unitPrice": 7480,
+          "total": 74800
+        }
+      ],
+      "subtotal": 179800,
+      "gstPercent": 18,
+      "gstAmount": 35000,
+      "grandTotal": 214800,
+      "deliveryDays": 7,
+      "paymentTerms": "15 days",
+      "notes": "Premium solid wood tabletop selections with integrated electric lift frames.",
+      "status": "Submitted",
+      "rating": 4
+    }
+  ],
+  "workflows": [
+    {
+      "id": "wf1",
+      "rfqId": "rfq1",
+      "quotationId": "q1",
+      "vendorName": "Infra Supplies Pvt Ltd",
+      "amount": 185000,
+      "status": "L2 Approval",
+      "steps": [
+        {
+          "role": "Procurement Head",
+          "name": "Rahul Mehta",
+          "status": "Approved",
+          "timestamp": "05 Jun 2026, 10:32 AM",
+          "remarks": "Recommended: Best price to rating metrics."
+        },
+        {
+          "role": "Finance Manager",
+          "name": "Priya Shah",
+          "status": "Awaiting"
+        },
+        {
+          "role": "Executive Sign-off",
+          "name": "System Admin",
+          "status": "Pending"
+        }
+      ],
+      "currentStepIndex": 1,
+      "remarks": null
+    }
+  ],
+  "documents": [
+    {
+      "id": "po1",
+      "documentType": "PO",
+      "referenceId": "q1",
+      "documentNumber": "PO-2026-0068",
+      "quotationId": "q1",
+      "vendorId": "v1",
+      "vendorName": "Infra Supplies Pvt Ltd",
+      "date": "21 May, 2026",
+      "dueDate": null,
+      "subtotal": 156780,
+      "cgst": 14110,
+      "sgst": 14110,
+      "grandTotal": 185000,
+      "status": "Completed",
+      "pdfLink": null,
+      "emailSent": false
+    },
+    {
+      "id": "po2",
+      "documentType": "PO",
+      "referenceId": "q2",
+      "documentNumber": "PO-2026-0069",
+      "quotationId": "q2",
+      "vendorId": "v2",
+      "vendorName": "Tech Core LTD",
+      "date": "22 May, 2026",
+      "dueDate": null,
+      "subtotal": 169500,
+      "cgst": 15255,
+      "sgst": 15255,
+      "grandTotal": 200010,
+      "status": "Completed",
+      "pdfLink": null,
+      "emailSent": false
+    },
+    {
+      "id": "inv1",
+      "documentType": "Invoice",
+      "referenceId": "po1",
+      "documentNumber": "INV-2026-0068",
+      "quotationId": "q1",
+      "vendorId": "v1",
+      "vendorName": "Infra Supplies Pvt Ltd",
+      "date": "22 May, 2026",
+      "dueDate": "21 June, 2026",
+      "subtotal": 156780,
+      "cgst": 14110,
+      "sgst": 14110,
+      "grandTotal": 185000,
+      "status": "Pending Payment",
+      "pdfLink": null,
+      "emailSent": false
+    },
+    {
+      "id": "inv2",
+      "documentType": "Invoice",
+      "referenceId": "po2",
+      "documentNumber": "INV-2026-0069",
+      "quotationId": "q2",
+      "vendorId": "v2",
+      "vendorName": "Tech Core LTD",
+      "date": "23 May, 2026",
+      "dueDate": "22 June, 2026",
+      "subtotal": 169500,
+      "cgst": 15255,
+      "sgst": 15255,
+      "grandTotal": 200010,
+      "status": "Paid",
+      "pdfLink": null,
+      "emailSent": false
+    }
+  ],
+  "activities": [
+    {
+      "id": "act1",
+      "title": "Quotation selected - Infra Supplies Pvt Ltd selected for office furniture procurement Q2",
+      "timestamp": "05 Jun 2026, 09:15 PM",
+      "category": "Approvals",
+      "userEmail": "officer@vendorbridge.com",
+      "userName": "Rahul Mehta"
+    },
+    {
+      "id": "act2",
+      "title": "Approval pending - PO-2026 awaiting L2 approval by Priya Shah",
+      "timestamp": "05 Jun 2026, 09:15 AM",
+      "category": "Approvals",
+      "userEmail": "officer@vendorbridge.com",
+      "userName": "Rahul Mehta"
+    },
+    {
+      "id": "act3",
+      "title": "RFQ published - Office Furniture Procurement Q2 sent to 3 vendors",
+      "timestamp": "04 Jun 2026, 11:00 AM",
+      "category": "RFQ",
+      "userEmail": "officer@vendorbridge.com",
+      "userName": "Rahul Mehta"
+    },
+    {
+      "id": "act4",
+      "title": "Vendor added - FastLog Transport registered and pending verification",
+      "timestamp": "03 Jun 2026, 03:20 PM",
+      "category": "Vendors",
+      "userEmail": "admin@vendorbridge.com",
+      "userName": "System Admin"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "n1",
+      "title": "New Quotation received from Infra Supplies Pvt Ltd for Furniture",
+      "timestamp": "2 Hours ago",
+      "read": false,
+      "type": "RFQ"
+    },
+    {
+      "id": "n2",
+      "title": "Quotation selected for office furniture procurement Q2 is awaiting L2 Approval",
+      "timestamp": "1 Day ago",
+      "read": false,
+      "type": "Approval"
+    },
+    {
+      "id": "n3",
+      "title": "Invoice generated for PO-2026-0068 (Infra Supplies)",
+      "timestamp": "3 Days ago",
+      "read": false,
+      "type": "Invoice"
+    }
+  ]
+}
